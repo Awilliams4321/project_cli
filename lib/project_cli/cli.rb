@@ -1,7 +1,21 @@
 class CLI
 
-  def connection_test
-    puts "Hello World"
+  def start
+    welcome
+    goodbye
   end
 
-end 
+  def welcome
+    puts "Welcome, Beauty Queen!"
+    sleep (2)
+    puts "Select the product you would like more info about."
+    sleep (2)
+  end
+
+  def goodbye
+    puts "See you soon beautiful!"
+    sleep (2)
+  end
+
+
+end
