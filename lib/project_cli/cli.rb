@@ -1,6 +1,6 @@
 class CLI
 
-  def start
+  def start_up
     welcome
     goodbye
   end
@@ -13,7 +13,7 @@ class CLI
   end
 
   def goodbye
-    puts "See you soon beautiful!"
+    puts "See you later and don't forget to slay!"
     sleep (2)
   end
 
