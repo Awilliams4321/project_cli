@@ -2,4 +2,4 @@
 
 require_relative "../config/environment"
 
-BeautyCli::CLI.new.start_up
+BeautyCli.start_up

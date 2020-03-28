@@ -1,4 +1,4 @@
-class BeautyCli::CLI
+class BeautyCli
 
   def self.start_up
     self.welcome
