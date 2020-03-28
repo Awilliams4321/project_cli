@@ -21,7 +21,7 @@ class CLI
     sleep (2)
   end
   
-  def get_char_list
+  def self.get_char_list 
     API.get_characters
   end 
 end 
