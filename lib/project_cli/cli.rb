@@ -1,8 +1,8 @@
-class BeautyCli
+class CLI 
   
   def self.start_up
     self.welcome
-    API.get_products
+    self.get_char_list
     self.goodbye
   end 
   
@@ -21,4 +21,7 @@ class BeautyCli
     sleep (2)
   end
   
+  def get_char_list
+    API.get_characters
+  end 
 end 
