@@ -1,15 +1,15 @@
-class Beauty
+class Characters
   
-  attr_accessor :brand, :name, :price, :description, :product_type
+  attr_accessor :name, :status, :species, :gender, :origin
   
   @@all = []
   
-  def initialize(:brand, :name, :price, :description, :product_type)
-    @brand = brand
+  def initialize(name, status, species, gender, origin)
     @name = name
-    @price = price
-    @description = description
-    @product_type = product_type
+    @status = status
+    @species = species
+    @gender = gender
+    @origin = origin
   end 
   
   def self.all
@@ -20,5 +20,4 @@ class Beauty
     @@all << self
   end 
   
-  def 
 end
