@@ -3,6 +3,7 @@ class BeautyCli
   def self.start_up
     self.welcome
     self.goodbye
+    API.get_products
   end
 
   def self.welcome

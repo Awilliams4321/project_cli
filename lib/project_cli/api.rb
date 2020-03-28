@@ -1,6 +1,6 @@
 class API
 
-  def self.get_makeup_lists
+  def self.get_products
     response = HTTParty.get("http://makeup-api.herokuapp.com/api/v1/products.json?brand=")
   end
 
