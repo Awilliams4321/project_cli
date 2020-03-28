@@ -2,4 +2,4 @@
 
 require_relative "../config/environment"
 
-CLI.new.connection_test
+CLI.start_up
