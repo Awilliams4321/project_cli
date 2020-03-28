@@ -1,19 +1,18 @@
 class CLI
 
-  def start_up
-    welcome
-    self.get_makeup_list
-    goodbye
+  def self.start_up
+    self.welcome
+    self.goodbye
   end
 
-  def welcome
+  def self.welcome
     puts "Welcome, Beauty Queen!"
     sleep (2)
     puts "Select the product you would like more info about."
     sleep (2)
   end
 
-  def goodbye
+  def self.goodbye
     puts "See you later and don't forget to slay!"
     sleep (2)
   end
