@@ -7,9 +7,9 @@ class CLI
   end 
   
   def self.welcome
-    puts "Welcome, Beauty Queen!"
+    puts "Welcome, fan!"
     sleep (2)
-    puts "To see more about the product you are interested in, enter the product name."
+    puts "To see more about the character you are interested in, enter the characters name."
     sleep(2)
     puts "To exit, enter 'exit'."
   end 
@@ -17,8 +17,6 @@ class CLI
   def self.goodbye
     puts "See you later..."
     sleep(2)
-    puts "And don't forget to slay!"
-    sleep (2)
   end
   
   def self.get_char_list 
