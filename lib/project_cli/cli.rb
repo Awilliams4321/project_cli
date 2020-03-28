@@ -8,8 +8,9 @@ class BeautyCli
   def self.welcome
     puts "Welcome, Beauty Queen!"
     sleep (2)
-    puts "Select the product you would like more info about."
+    puts "To see more about the product you are interested in, enter the product number."
     sleep (2)
+    puts "To exit, enter 'exit'".
   end
 
   def self.goodbye
