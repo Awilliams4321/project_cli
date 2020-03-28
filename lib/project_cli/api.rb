@@ -1,8 +1,7 @@
 class API
 
-  def self.get_products
-    response = HTTParty.get("http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
-")
+  def self.get_characters
+    response = HTTParty.get("https://rickandmortyapi.com/api/character/")
   end
 
 end
