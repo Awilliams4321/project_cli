@@ -2,8 +2,7 @@ class CLI
   
   def self.start_up
     self.welcome
-    self.get_char_list
-    self.goodbye
+    self.options 
   end 
   
   def self.welcome
@@ -21,7 +20,10 @@ class CLI
     puts "STAY OUT OF MY PERSONAL SPACE!"
   end
   
-  def options
+  def self.options
+    
+    usr_entry = gets.strip
+    
     if usr_entry == 'characters'
       puts "list of characters"
     elsif usr_entry == 'exit'
@@ -30,7 +32,6 @@ class CLI
       puts "Invalid option. Please re-enter request."
     end
   end 
-  
   
   def self.get_char_list 
     API.get_characters
