@@ -2,6 +2,6 @@
 
 require_relative "../config/environment"
 
-API.get_characters
-binding.pry
+CLI.start_up
+#binding.pry
 
