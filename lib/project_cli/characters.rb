@@ -3,17 +3,9 @@ class Characters
   
   attr_accessor :name, :status, :species, :gender, :origin
   
-  # def initialize(name, status, species, gender, origin)
-  #   @name = name
-  #   @status = status
-  #   @species = species
-  #   @gender = gender
-  #   @origin = origin
-  # end 
-  
   def initialize(hash)
     hash.each do |k, v|
-      self.send(("#{k}="), v) 
+      self.send(("#{k}="), v) if self.respond_to?(("#{k}=")) 
     end 
     save
   end 
