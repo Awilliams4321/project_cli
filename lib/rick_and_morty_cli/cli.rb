@@ -51,25 +51,14 @@ class CLI
     puts "Enter the name of the character you would like more info about:"
     
     usr_entry = gets.strip 
-    self.char_entry(usr_entry)
+    
+    self.char_choice(usr_entry)
     
   end 
   
-  def self.char_entry(character)
-    Characters.all.each do |character|
-      character.each do |attribute, value|
-        if attribute == :name, :status, :species, :type, :gender, :origin
-          puts "Name: #{name}"
-          puts "Status: #{status}"
-          puts "Species: #{species}"
-          puts "Type: #{type}"
-          puts "Gender: #{gender}"
-          puts "Origin: #{origin}"
-        end 
-      end 
-    end 
+  def self.char_choice(character)
+    Characters.find_by_name
   end 
-          # value.each do |name, status, species, type, gender, origin|
     
   def self.get_char_list 
     API.get_info
