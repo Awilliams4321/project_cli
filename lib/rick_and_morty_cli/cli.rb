@@ -8,7 +8,7 @@ class CLI
   def self.welcome
     puts "Welcome fan, I'm PICKLE RIIIICK!"
     sleep (3)
-    puts "To see info about your favorite characters on the show, enter 'characters'."
+    puts "To see the list of characters on the show, enter 'characters'."
     sleep(2)
     puts "To exit, enter 'exit'."
     sleep(2)
@@ -29,11 +29,15 @@ class CLI
     elsif usr_entry == 'exit'
       puts self.goodbye
     else 
-      puts "Invalid entry. Please re-enter request."
+      puts self.invalid_entry
       self.options 
     end
   end 
   
+  def self.invalid_entry
+    puts "Invalid entry. Please re-enter request."
+  end 
+    
   def self.get_char_list 
     API.get_characters
   end 
