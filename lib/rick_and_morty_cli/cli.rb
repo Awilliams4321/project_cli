@@ -39,7 +39,13 @@ class CLI
     puts "Invalid entry. Please re-enter request."
   end 
   
-  def char_list 
+  def self.char_list 
+    Characters.all.each_with_index(1) do |index, character|
+      puts "#{index + 1}. #{character.name}"
+    end 
+    puts ""
+    puts ""
+    puts "Enter the name of the character you would like more info about:"
     
   end 
     
