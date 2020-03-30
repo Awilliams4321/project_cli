@@ -26,7 +26,7 @@ class CLI
     usr_entry = gets.strip
     
     if usr_entry == 'characters'
-      puts "list of characters"
+      puts self.char_list
     elsif usr_entry == 'exit'
       puts self.goodbye
     else 
