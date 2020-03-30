@@ -2,6 +2,7 @@ class CLI
   
   def self.start_up
     self.welcome
+    self.get_char_list 
     self.options 
   end 
   
@@ -37,8 +38,12 @@ class CLI
   def self.invalid_entry
     puts "Invalid entry. Please re-enter request."
   end 
+  
+  def char_list 
+    
+  end 
     
   def self.get_char_list 
-    API.get_characters
+    API.get_info
   end 
 end 
