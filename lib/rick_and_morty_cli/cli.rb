@@ -2,8 +2,8 @@ class CLI
   
   def self.start_up
     self.welcome
-    self.get_char_list 
-    self.options 
+    self.get_char_list
+    self.options
   end 
   
   def self.welcome
@@ -27,6 +27,7 @@ class CLI
     
     if usr_entry == 'characters'
       puts self.char_list
+      self.options
     elsif usr_entry == 'exit'
       puts self.goodbye
     else 
@@ -40,9 +41,11 @@ class CLI
   end 
   
   def self.char_list 
-    Characters.all.each_with_index(1) do |index, character|
+    
+    Characters.all.each.with_index do |character, index|
       puts "#{index + 1}. #{character.name}"
     end 
+    
     puts ""
     puts ""
     puts "Enter the name of the character you would like more info about:"
