@@ -1,7 +1,7 @@
 class Characters
   @@all = []
   
-  attr_accessor :name, :status, :species, :gender, :origin
+  attr_accessor :name, :status, :species, :type, :gender, :origin
   
   def initialize(hash)
     hash.each do |k, v|
