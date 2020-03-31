@@ -57,15 +57,20 @@ class CLI
   end 
   
   def self.char_choice(character)
-    id = Characters.find_by_name(character)
-    id.each do |i|
-      puts " Name: #{i.name}"
-      puts " Status: #{i.status}"
-      puts " Species: #{i.species}"
-      puts " Type: #{i.type}"
-      puts " Gender: #{i.gender}"
-      puts " Origin: #{i.origin}"
-    end 
+    char_object = Characters.find_by_name(character)
+    #binding.pry
+   # id.each do |i|
+      puts " Gender: #{char_object.gender}"
+      puts " Name: #{ char_object.name}"
+      puts " Origin: #{char_object.origin}"
+      puts " Species: #{char_object.species}"
+      puts " Status: #{char_object.status}"
+      if char_object.type.strip.empty?
+        puts " Type: N/A"
+      else
+         puts " Type: #{char_object.type}"
+       end
+        
   end 
     
   def self.get_char_list 
