@@ -9,9 +9,10 @@ class CLI
   def self.welcome
     puts "Welcome fan, I'm PICKLE RIIIICK!"
     sleep (3)
-    puts "To see the list of characters on the show, enter 'characters'."
+    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    puts "> To see the list of characters on the show, enter 'characters'."
     sleep(2)
-    puts "To exit, enter 'exit'."
+    puts "> To exit, enter 'exit'."
     sleep(2)
   end 
   
@@ -49,28 +50,29 @@ class CLI
     puts ""
     puts ""
     puts "Enter the name of the character you would like more info about:"
+    puts ""
     
     usr_entry = gets.strip 
     
     self.char_choice(usr_entry)
     puts ""
     puts "*********************************"
+    sleep(2)
     puts ""
+    sleep(2)
     puts "> To return to the list of characters, enter 'characters'."
+    sleep(2)
     puts "> If you would like to exit, enter 'exit'."
-    
-    
   end 
   
   def self.char_choice(character)
     char_object = Characters.find_by_name(character)
-    #binding.pry
-   # id.each do |i|
+      puts ""
+      puts " ~ Name: #{char_object.name}"
       puts " ~ Gender: #{char_object.gender}"
-      puts " ~ Name: #{ char_object.name}"
-      puts " ~ Origin: #{char_object.origin}"
       puts " ~ Species: #{char_object.species}"
       puts " ~ Status: #{char_object.status}"
+      puts " ~ Origin: #{char_object.origin}"
       if char_object.type.strip.empty?
         puts " ~ Type: N/A"
       else
