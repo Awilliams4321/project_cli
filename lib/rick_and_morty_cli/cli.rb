@@ -53,6 +53,12 @@ class CLI
     usr_entry = gets.strip 
     
     self.char_choice(usr_entry)
+    puts ""
+    puts "*********************************"
+    puts ""
+    puts "> To return to the list of characters, enter 'characters'."
+    puts "> If you would like to exit, enter 'exit'."
+    
     
   end 
   
@@ -60,17 +66,16 @@ class CLI
     char_object = Characters.find_by_name(character)
     #binding.pry
    # id.each do |i|
-      puts " Gender: #{char_object.gender}"
-      puts " Name: #{ char_object.name}"
-      puts " Origin: #{char_object.origin}"
-      puts " Species: #{char_object.species}"
-      puts " Status: #{char_object.status}"
+      puts " ~ Gender: #{char_object.gender}"
+      puts " ~ Name: #{ char_object.name}"
+      puts " ~ Origin: #{char_object.origin}"
+      puts " ~ Species: #{char_object.species}"
+      puts " ~ Status: #{char_object.status}"
       if char_object.type.strip.empty?
-        puts " Type: N/A"
+        puts " ~ Type: N/A"
       else
-         puts " Type: #{char_object.type}"
+         puts " ~ Type: #{char_object.type}"
        end
-        
   end 
     
   def self.get_char_list 
