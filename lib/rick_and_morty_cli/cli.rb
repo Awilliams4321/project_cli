@@ -57,7 +57,15 @@ class CLI
   end 
   
   def self.char_choice(character)
-    Characters.find_by_name
+    id = Characters.find_by_name(character)
+    id.each do |i|
+      puts " Name: #{i.name}"
+      puts " Status: #{i.status}"
+      puts " Species: #{i.species}"
+      puts " Type: #{i.type}"
+      puts " Gender: #{i.gender}"
+      puts " Origin: #{i.origin}"
+    end 
   end 
     
   def self.get_char_list 
