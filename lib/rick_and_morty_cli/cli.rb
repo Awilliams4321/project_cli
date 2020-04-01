@@ -44,7 +44,7 @@ class CLI
   def self.char_list 
     
     Characters.all.each.with_index do |character, index|
-      puts "#{index + 1}. #{character.name}"
+      puts "#{index + 1}. #{character.name.split.map(&:capitalize).join(' ')}"
     end 
     
     puts ""
@@ -52,7 +52,7 @@ class CLI
     puts "Enter the name of the character you would like more info about:"
     puts ""
     
-    usr_entry = gets.strip 
+    usr_entry = gets.strip.split.map(&:capitalize).join(' ')
     
     self.char_choice(usr_entry)
     puts ""
