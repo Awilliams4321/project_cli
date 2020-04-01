@@ -19,7 +19,7 @@ class Characters
   end 
   
   def self.find_by_name(name)
-    @@all.find{|character| character.name == name}
+    @@all.find{|character| character.name.split.map(&:capitalize).join(' ') == name}
   end 
   
 end
