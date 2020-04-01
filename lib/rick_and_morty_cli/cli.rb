@@ -13,7 +13,7 @@ class CLI
     puts "> To see the list of characters on the show, enter 'characters'."
     sleep(2)
     puts "> To exit, enter 'exit'."
-    sleep(2)
+    sleep(1)
   end 
   
   def self.goodbye
