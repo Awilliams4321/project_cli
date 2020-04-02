@@ -24,7 +24,7 @@ class CLI
   
   def self.options
     
-    usr_entry = gets.strip
+    usr_entry = gets.strip.downcase
     
     if usr_entry == 'characters'
       puts self.char_list
