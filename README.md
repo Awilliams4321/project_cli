@@ -1,28 +1,16 @@
-# ProjectCli
+# rick_and_morty_cli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/project_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome! This gem will allow you to view the details of 20 characters on the Rick and Morty show. In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/project_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'project_cli'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install project_cli
+At this moment in time, this gem has not been published for download or use. This project is available on Github at: https://github.com/Awilliams4321/rick_and_morty_cli.git 
 
 ## Usage
 
-TODO: Write usage instructions here
+You may fork and clone this project using the provided Github repository and cd into rick_and_morty_cli/bin/run. Install the pry and httparty gems by typing 'gem install pry' and 'gem install httparty -v 0.13.7' into the terminal. After the appropriate gems have been installed, you may run 'bin/run' and follow the prompts to recieve information about your favorite Rick and Morty characters!
 
 ## Development
 
