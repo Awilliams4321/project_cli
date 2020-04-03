@@ -1,6 +1,6 @@
 source "https://rubygems.org"
+
 gem 'httparty', '~> 0.13.7'
+gem 'rick_and_morty_cli'
 
 
-# Specify your gem's dependencies in project_cli.gemspec
-gemspec
