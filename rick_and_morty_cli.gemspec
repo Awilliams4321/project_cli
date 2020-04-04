@@ -4,14 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "project_cli/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "project_cli"
-  spec.version       = ProjectCli::VERSION
+  spec.name          = "rick_and_morty_cli"
+  spec.version       = "RickAndMortyCli::VERSION"
   spec.authors       = ["'Amber Williams'"]
-  spec.email         = ["'awilliams1234@live.com'"]
+  spec.email         = ["'Awilliams1234@live.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{"This gem allows you to see a list of character details from the Rick and Morty show."}
+  spec.homepage      = "https://github.com/Awilliams4321/rick_and_morty_cli.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -38,4 +37,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "httparty", "~> 0.13.7"
+  spec.add_development_dependency "pry", "~> 0.13.0"
+  
 end
