@@ -1,9 +1,9 @@
 class CLI 
   
   def self.start_up
-    self.welcome
-    self.get_char_list
-    self.options
+    welcome
+    get_char_list
+    options
   end 
   
   def self.welcome
@@ -32,13 +32,13 @@ class CLI
     usr_entry = gets.strip.downcase
     
     if usr_entry == 'characters'
-      puts self.char_list
-      self.options
+      puts char_list
+      options 
     elsif usr_entry == 'exit'
-      puts self.goodbye
+      puts goodbye
     else 
-      puts self.invalid_entry
-      self.options 
+      puts invalid_entry
+      options 
     end
   end 
   
@@ -63,11 +63,9 @@ class CLI
     puts "*******************************************************************************"
     sleep(2)
     puts ""
-    sleep(2)
     puts "> To return to the list of characters, enter 'characters'."
     sleep(2)
     puts "> If you would like to exit, enter 'exit'."
-    #self.options 
   end 
   
   def self.char_choice(character)
