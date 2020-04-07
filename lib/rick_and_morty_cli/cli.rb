@@ -17,11 +17,15 @@ class CLI
   end 
   
   def self.goodbye
-    puts "See you later! And next time..."
+    puts ""
+    puts "~~ See you later! And next time... ~~"
     sleep(2)
-    puts "STAY OUT OF MY PERSONAL SPACE!"
+    puts ""
+    puts "  ------------------------------"
+    puts "  STAY OUT OF MY PERSONAL SPACE!"
+    puts "  ------------------------------"
   end
-  
+
   def self.options
     
     usr_entry = gets.strip.downcase
@@ -63,6 +67,7 @@ class CLI
     puts "> To return to the list of characters, enter 'characters'."
     sleep(2)
     puts "> If you would like to exit, enter 'exit'."
+    self.options 
   end 
   
   def self.char_choice(character)
