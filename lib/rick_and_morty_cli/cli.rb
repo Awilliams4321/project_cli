@@ -7,9 +7,10 @@ class CLI
   end 
   
   def self.welcome
-    puts "Welcome fan, I'm PICKLE RIIIICK!"
-    sleep (3)
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    puts "Welcome fan, I'm PICKLE RIIIICK!"
+    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    sleep(3)
     puts "> To see the list of characters on the show, enter 'characters'."
     sleep(2)
     puts "> To exit, enter 'exit'."
@@ -59,20 +60,20 @@ class CLI
     usr_entry = gets.strip.split.map(&:capitalize).join(' ')
     
     self.char_choice(usr_entry)
-    puts ""
-    puts "*********************************"
+    puts "*******************************************************************************"
     sleep(2)
     puts ""
     sleep(2)
     puts "> To return to the list of characters, enter 'characters'."
     sleep(2)
     puts "> If you would like to exit, enter 'exit'."
-    self.options 
+    #self.options 
   end 
   
   def self.char_choice(character)
     char_object = Characters.find_by_name(character)
       puts ""
+      puts "******************************************************************************"
       puts " ~ Name: #{char_object.name}"
       puts " ~ Gender: #{char_object.gender}"
       puts " ~ Species: #{char_object.species}"
