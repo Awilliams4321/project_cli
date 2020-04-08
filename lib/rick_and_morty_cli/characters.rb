@@ -7,6 +7,7 @@ class Characters
     hash.each do |k, v|
       self.send(("#{k}="), v) if self.respond_to?(("#{k}=")) 
     end 
+    origin == origin["name"] #Figure out how to pull out JUST the name
     save
   end 
   
