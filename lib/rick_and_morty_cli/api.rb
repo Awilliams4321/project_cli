@@ -1,6 +1,6 @@
 class API
   
-  def self.get_info
+  def get_info
     response = HTTParty.get("https://rickandmortyapi.com/api/character/")
     characters = JSON.parse(response.body)["results"]
     characters.each do |character|
