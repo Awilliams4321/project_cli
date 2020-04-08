@@ -54,18 +54,25 @@ class CLI
     
     puts ""
     puts ""
-    puts "Enter the name of the character you would like more info about:"
-    puts ""
+    choose_character
     
-    usr_entry = gets.strip.split.map(&:capitalize).join(' ')
-    
-    char_choice(usr_entry)
     puts "*******************************************************************************"
     sleep(2)
     puts ""
     puts "> To return to the list of characters, enter 'characters'."
     sleep(2)
     puts "> If you would like to exit, enter 'exit'."
+    
+  end 
+  
+  def choose_character
+    puts "Enter the name of the character you would like more info about:"
+    puts ""
+    
+    usr_entry = gets.strip.split.map(&:capitalize).join(' ')
+    
+    char_choice(usr_entry)
+    
   end 
   
   def char_choice(character)
@@ -83,8 +90,12 @@ class CLI
       else
          puts " ~ Type: #{char_object.type}"
        end
-     end 
-  end 
+    else
+      invalid_entry
+      puts ""
+      choose_character
+    end 
+  end
     
   def get_char_list 
     API.new.get_info
