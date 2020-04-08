@@ -1,12 +1,12 @@
 class CLI 
   
-  def self.start_up
+  def start_up
     welcome
     get_char_list
     options
   end 
   
-  def self.welcome
+  def welcome
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     puts "Welcome fan, I'm PICKLE RIIIICK!"
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -17,7 +17,7 @@ class CLI
     sleep(1)
   end 
   
-  def self.goodbye
+  def goodbye
     puts ""
     puts "~~ See you later! And next time... ~~"
     sleep(2)
@@ -27,7 +27,7 @@ class CLI
     puts "  ------------------------------"
   end
 
-  def self.options
+  def options
     
     usr_entry = gets.strip.downcase
     
@@ -42,11 +42,11 @@ class CLI
     end
   end 
   
-  def self.invalid_entry
+  def invalid_entry
     puts "Invalid entry. Please re-enter request."
   end 
   
-  def self.char_list 
+  def char_list 
     
     Characters.all.each.with_index do |character, index|
       puts "#{index + 1}. #{character.name.split.map(&:capitalize).join(' ')}"
@@ -59,7 +59,7 @@ class CLI
     
     usr_entry = gets.strip.split.map(&:capitalize).join(' ')
     
-    self.char_choice(usr_entry)
+    char_choice(usr_entry)
     puts "*******************************************************************************"
     sleep(2)
     puts ""
@@ -68,8 +68,9 @@ class CLI
     puts "> If you would like to exit, enter 'exit'."
   end 
   
-  def self.char_choice(character)
+  def char_choice(character)
     char_object = Characters.find_by_name(character)
+    if char_object
       puts ""
       puts "******************************************************************************"
       puts " ~ Name: #{char_object.name}"
@@ -82,10 +83,11 @@ class CLI
       else
          puts " ~ Type: #{char_object.type}"
        end
+     end 
   end 
     
-  def self.get_char_list 
-    API.get_info
+  def get_char_list 
+    API.new.get_info
   end 
   
 end 
